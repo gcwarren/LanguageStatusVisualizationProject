@@ -34,20 +34,36 @@ th {
   color: white;
 }
 
+/* Dark Styles for the floating panel */
+
 .floating-panel {
+  position: fixed;
+  top: 42%;
+  left: 0.5%;
+  color: white;
+  transform: translateY(-50%);
+  width: 12%;
+  height: 600px;
+  /* transparent with slate gray */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+  font-family: 'Roboto','sans-serif';
+}
+
+/* .floating-panel {
   position: fixed;
   top: 42%;
   left: 0.5%;
   transform: translateY(-50%);
   width: 12%;
   height: 600px;
-  /* transparent with white background */
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 10px;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   font-family: 'Roboto','sans-serif';
-} 
+}  */
 
 .title-panel {
   position: fixed;
@@ -60,4 +76,63 @@ th {
   padding: 10px;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   text-align: center;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Styles for the table */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Styles for legend */
+
+.legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legend-item div {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.legend-text {
+  font-size: 16px;
+}
+
+.legend-text span {
+  margin-right: 10px;
+}
+
+.legend-color {
+  /* circular */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
