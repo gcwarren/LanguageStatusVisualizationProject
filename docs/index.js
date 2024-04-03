@@ -29,7 +29,7 @@ function initMap() {
     //     }
     // });
 
-    d3.csv("../merged.csv", function(data) { 
+    d3.csv("merged.csv", function(data) { 
 
 
         // Safe, Vulnerable, Definitely Endangered, Severely Endangered, Critically endangered, Extinct
