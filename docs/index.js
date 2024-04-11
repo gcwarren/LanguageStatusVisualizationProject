@@ -29,7 +29,7 @@ function initMap() {
     //     }
     // });
 
-    d3.csv("merged.csv", function(data) { 
+    d3.csv("merged_v2.csv", function(data) { 
 
 
         // Safe, Vulnerable, Definitely Endangered, Severely Endangered, Critically endangered, Extinct
@@ -78,8 +78,8 @@ function initMap() {
                     scale: sizes[d['Degree of endangerment']],
                     fillColor: colors[d['Degree of endangerment']],
                     fillOpacity: 0.5,
-                    strokeColor: 'black',
-                    strokeWeight: 0
+                    strokeColor: colors[d['Degree of endangerment']],
+                    strokeWeight: 2
                 },
 
             
@@ -91,9 +91,14 @@ function initMap() {
             //Add click event to open infowindow on marker
             
             var myHTMLss = '<table>' +
-                '<tr><td>Name:</td><td>' + d['Name in English'] + '</td></tr>' +
+                '<tr><td>Name:</td><td><a target="_blank" href="'+d['url']+'">'+ d['Name in English'] + '</a></td></tr>' +
                 '<tr><td>Number of speakers:</td><td>' + d['Number of speakers'] + '</td></tr>' +
                 '<tr><td>Degree of endangerment:</td><td>' + d['Degree of endangerment'] + '</td></tr>' +
+                '<tr><td>Family:</td><td>' + d['family'] + '</td></tr>' +
+                '<tr><td>Dialects:</td><td>' + d['dialects'] + '</td></tr>' +
+                '<tr><td>Macro Area:</td><td>' + d['macroarrea'] + '</td></tr>'+
+                '<tr><td>Regions:</td><td>' + d['regions'] + '</td></tr>' +
+                '<tr><td>Glottocode:</td><td> <a target="_blank" href="https://glottolog.org/resource/languoid/id/' + d['glottocode'] + '">'+ d['Name in English']+'</a></td></tr>' +
                 '</table>';
             
             marker.addListener('click', function(event) {
