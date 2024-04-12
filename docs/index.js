@@ -29,7 +29,7 @@ function initMap() {
     //     }
     // });
 
-    d3.csv("merged_v2.csv", function(data) { 
+    d3.csv("master_merge.csv", function(data) { 
 
 
         // Safe, Vulnerable, Definitely Endangered, Severely Endangered, Critically endangered, Extinct
@@ -41,7 +41,7 @@ function initMap() {
             //color of marker based on degree of endangerment
             var color = 'black';
 
-            if (d['Degree of endangerment'] == 'Vulnerable') {
+            if (d['aes_status'] == 'Vulnerable') {
 
                 color = 'yellow';
             } else if (d['Degree of endangerment'] == 'Definitely endangered') {
@@ -50,21 +50,21 @@ function initMap() {
             }
 
             var colors = {
-                "Safe": "green",
-                "Vulnerable": "yellow",
-                "Definitely endangered": "orange",
-                "Severely endangered": "red",
-                "Critically endangered": "purple",
-                "Extinct": "black"
+                "not endangered": "green",
+                "threatened": "yellow",
+                "shifting": "orange",
+                "moribund": "red",
+                "nearly extinct": "purple",
+                "extinct": "black"
             }
 
             var sizes = {
-                "Safe": 5,
-                "Vulnerable": 10,
-                "Definitely endangered": 15,
-                "Severely endangered": 20,
-                "Critically endangered": 25,
-                "Extinct": 30
+                "not endngered": 5,
+                "threatened": 10,
+                "shifting": 15,
+                "moribund": 20,
+                "nearly extinct": 25,
+                "extinct": 30
             }
 
 
@@ -75,30 +75,31 @@ function initMap() {
 
                 icon: {
                     path: google.maps.SymbolPath.CIRCLE,
-                    scale: sizes[d['Degree of endangerment']],
-                    fillColor: colors[d['Degree of endangerment']],
+                    scale: sizes[d['aes_status']],
+                    fillColor: colors[d['aes_status']],
                     fillOpacity: 0.5,
-                    strokeColor: colors[d['Degree of endangerment']],
+                    strokeColor: colors[d['aes_status']],
                     strokeWeight: 2
                 },
 
             
                 position: { lat: parseFloat(d['latitude']), lng: parseFloat(d['longitude']) },
                 map: map,
-                title: 'Hello World!'
+                title: d['Name in English']
             });
 
             //Add click event to open infowindow on marker
             
             var myHTMLss = '<table>' +
-                '<tr><td>Name:</td><td><a target="_blank" href="'+d['url']+'">'+ d['Name in English'] + '</a></td></tr>' +
-                '<tr><td>Number of speakers:</td><td>' + d['Number of speakers'] + '</td></tr>' +
+                '<tr><td>Name:</td><td><a target="_blank" href="'+d['url']+'">'+ d['name'] + '</a></td></tr>' +
+                '<tr><td>Number of speakers:</td><td>' + d['speakers'] + '</td></tr>' +
                 '<tr><td>Degree of endangerment:</td><td>' + d['Degree of endangerment'] + '</td></tr>' +
                 '<tr><td>Family:</td><td>' + d['family'] + '</td></tr>' +
-                '<tr><td>Dialects:</td><td>' + d['dialects'] + '</td></tr>' +
+                // '<tr><td>Dialects:</td><td>' + d['dialects'] + '</td></tr>' +
                 '<tr><td>Macro Area:</td><td>' + d['macroarrea'] + '</td></tr>'+
                 '<tr><td>Regions:</td><td>' + d['regions'] + '</td></tr>' +
-                '<tr><td>Glottocode:</td><td> <a target="_blank" href="https://glottolog.org/resource/languoid/id/' + d['glottocode'] + '">'+ d['Name in English']+'</a></td></tr>' +
+                '<tr><td>Glottocode:</td><td> <a target="_blank" href="https://glottolog.org/resource/languoid/id/' + d['glottocode'] + '">'+ d['glottocode']+'</a></td></tr>' +
+                '<tr><td>ISO Code:</td><td> <a target="_blank" href="https://iso639-3.sil.org/about/' + d['iso6393'] + '">'+ d['iso6393']+'</a></td></tr>' +
                 '</table>';
             
             marker.addListener('click', function(event) {
