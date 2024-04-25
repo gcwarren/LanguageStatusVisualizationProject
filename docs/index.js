@@ -59,7 +59,7 @@ function initMap() {
             }
 
             var sizes = {
-                "not endngered": 5,
+                "not endangered": 5,
                 "threatened": 10,
                 "shifting": 15,
                 "moribund": 20,
