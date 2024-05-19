@@ -91,12 +91,12 @@ function initMap() {
             //Add click event to open infowindow on marker
             
             var myHTMLss = '<table>' +
-                '<tr><td>Name:</td><td><a target="_blank" href="'+d['url']+'">'+ d['name'] + '</a></td></tr>' +
+                '<tr><td>Name:</td><td><a target="_blank" href="'+d['Wikipedia_Url']+'">'+ d['name'] + '</a></td></tr>' +
                 '<tr><td>Number of speakers:</td><td>' + d['speakers'] + '</td></tr>' +
                 '<tr><td>Degree of endangerment:</td><td>' + d['Degree of endangerment'] + '</td></tr>' +
                 '<tr><td>Family:</td><td>' + d['family'] + '</td></tr>' +
-                // '<tr><td>Dialects:</td><td>' + d['dialects'] + '</td></tr>' +
-                '<tr><td>Macro Area:</td><td>' + d['macroarrea'] + '</td></tr>'+
+                '<tr><td>Dialects:</td><td>' + d['dialects'] + '</td></tr>' +
+                '<tr><td>Macro Area:</td><td>' + d['macroarea'] + '</td></tr>'+
                 '<tr><td>Regions:</td><td>' + d['regions'] + '</td></tr>' +
                 '<tr><td>Glottocode:</td><td> <a target="_blank" href="https://glottolog.org/resource/languoid/id/' + d['glottocode'] + '">'+ d['glottocode']+'</a></td></tr>' +
                 '<tr><td>ISO Code:</td><td> <a target="_blank" href="https://iso639-3.sil.org/about/' + d['iso6393'] + '">'+ d['iso6393']+'</a></td></tr>' +
