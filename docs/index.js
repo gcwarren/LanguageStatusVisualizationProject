@@ -85,7 +85,7 @@ function initMap() {
             
                 position: { lat: parseFloat(d['latitude']), lng: parseFloat(d['longitude']) },
                 map: map,
-                title: d['Name in English']
+                title: d['name']
             });
 
             //Add click event to open infowindow on marker
