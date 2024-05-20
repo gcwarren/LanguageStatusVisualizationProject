@@ -33,6 +33,29 @@ To address the issue of accessibility described above, I propose the creation of
 2. A visualization which emphasizes the extent to which languages are endangered.
 3. A visualization which emphasizes the lack of publicly available data on language status.
 This was accomplished using minimal information from Glottolog, and the majority of information from Wikipedia language pages. 
+Language death is not a novel topic in the field of linguistics. Rather, the phrase language death was first used in 1972, lending the field the opportunity to discuss, research, and preserve language status for the past 50 years. [2] Yet, despite humanity’s current disposition to lose over 6,000 languages within the century - and with them cultures, knowledge, identities, and social customs - the reality of language death, and the implications therein, are seldom known outside of the field. The grim outlook of world languages is effectively conveyed by the following estimates:
+1. The Language Conservancy (TLC) estimates that "more than 7,000 languages resound across
+our planet every moment, but about 2,900 or 41% are endangered. At current rates, about
+90% of all languages will become extinct in the next 100 years." [3]
+2. The United Nations Educational, Scientific and Cultural Organization (UNESCO), estimates
+an even faster rate of language death, positing that "around 3,000 languages could disappear before the end of the century, at a rate of one every two weeks." [4] 
+
+Languages encapsulate much more than semantics: they carry with them the history, experiences, and ways of life of their speakers. This ranges from indigenous medicinal practices - many of which use flora native to the land, often untranslated and unrecorded in any other language - to nuanced phrases developed from the experiences of generations. 
+
+Despite the gravity of such losses, the most comprehensive literature exists behind paywalls. Conventionally credible sources such as Ethnologue and Atlas of the World’s Languages require even academics to pay lofty subscription and purchase fees, occasionally copyright licenses. [1] [5] Furthermore, resources such as UNESCO’s The World Atlas of Languages (UNESCO WAL), which advertise downloadable data to account holders - obtainable through signing up for an account - is poorly monitored. This leaves the general population with access to one comprehensive resource: Glottolog. [6]
+
+Glottolog, although publicly accessible, is subject to three criticisms:
+1. Glottolog is not considered the conventional source for information about languages, and thus is not perceived within academia as credible when compared with the standard: Ehtnologue.
+2. Glottolog data is not available for download in its entirety. Although this is common, and Glottolog creators are not obligated to release their hard-earned data, this leaves people with no publicly available resource for viewing comprehensive language data.
+3. Glottolog is not easily navigable for all users. Although this is surely a qualitative assessment, it is worth considering that Glottolog windows are nested, and require users to navigate through multiple steps to view statistics on a single language. For the general population, this organization may not be maximally effective.
+
+These assessments are not intended to be critical; rather, they are meant to assess the usability of Glottolog in raising awareness of language death when presented to the average user. Although comprehensive, the navigability of Glottolog is a potentially ineffective presentation of language data.
+
+To address the issue of accessibility described above, I propose the creation of a website which has the primary function of:
+1. The exclusive visualization of publicly available information about languages.
+2. A visualization which emphasizes the extent to which languages are endangered.
+3. A visualization which emphasizes the lack of publicly available data on language status.
+This was accomplished using minimal information from Glottolog, and the majority of information from Wikipedia language pages. 
 
 ### Data
 To emphasize what information is publicly available for world languages, the following information was obtained from Wikipedia pages (where discover-able) for a complete list of world languages as provided by ISO-639-3 Codes:
